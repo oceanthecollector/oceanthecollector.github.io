@@ -1,0 +1,79 @@
+*{
+    margin: 20;
+    padding: 30;
+   
+}
+
+/* I want to make my page look abit of dominant by the color palette*/
+
+body {
+    color:goldenrod;
+    background-color:rgb(17, 17, 178);
+    font-family:monospace;
+    font-size: 12px;
+}
+
+p.three {
+   
+    border-color:rgb(175, 89, 255);
+    border-width: 3px;
+
+    border-top-style: dashed;
+  border-right-style: solid;
+  border-bottom-style: dashed;
+  border-left-style: solid
+  
+  padding-top: 100px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 10px;;
+}
+
+p.two {
+   
+    border-color:rgb(175, 89, 255);
+    border-width: 3px;
+
+    border-top-style: dashed;
+  border-right-style: solid;
+  border-bottom-style: dashed;
+  border-left-style: solid
+  
+  padding-top: 100px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 10px;;
+}
+
+
+p.one {
+   
+    border-color:rgb(175, 89, 255);
+    border-width: 3px;
+
+    border-top-style: dashed;
+  border-right-style: solid;
+  border-bottom-style: dashed;
+  border-left-style: solid
+  
+  padding-top: 100px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 10px;;
+}
+
+h1 {
+    color:rgb(255, 255, 255);
+    font-family:'Courier New', Courier, monospace;
+}
+
+h2 {
+    font-family:monospace;
+    font-size: 20px;
+}
+
+h3 {
+    color:aliceblue;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 22px;
+}
