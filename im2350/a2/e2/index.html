@@ -14,9 +14,18 @@
 
   </head>
 
+  </html>
+  
+  <!--header start from here-->
+  <header>
+
+    <h1>Interactive Media 1 Recipe List</h1>
+  
+  </header>
+
   <body>
 
-    <div>Interactive Media 1 Recipe List</div>
+    
 
     <hr /> 
 
@@ -37,7 +46,38 @@
         <button class="FilterButton" onclick='filterRecipes("level", "medium", this)'>Medium</button>
       </details>
 
+      <details class="FilterBox">
+        <summary>Cuisine</summary>
+        <button class="FilterButton" onclick='filterRecipes("taste", "Italian", this)'>Italian</button>
+        <button class="FilterButton" onclick='filterRecipes("taste", "Fusion", this)'>Fusion</button>
+        <button class="FilterButton" onclick='filterRecipes("taste", "Korean", this)'>Korean</button>
+        <button class="FilterButton" onclick='filterRecipes("taste", "Western", this)'>Western</button>
+        <button class="FilterButton" onclick='filterRecipes("taste", "North", this)'>North African</button>
+        <button class="FilterButton" onclick='filterRecipes("taste", "Russ", this)'>Russian</button>
+        <button class="FilterButton" onclick='filterRecipes("taste", "French", this)'>French</button>
+      </details>
+
+      <details class="FilterBox">
+        <summary>Dietary</summary>
+        <button class="FilterButton" onclick='filterRecipes("diet", "Vegetarian", this)'>Vegetarian</button>
+        <button class="FilterButton" onclick='filterRecipes("diet", "meat", this)'>Meat based</button>
+        <button class="FilterButton" onclick='filterRecipes("diet", "pes", this)'>Pescatarian</button>
+      
+      </details>
+
+      <details class="FilterBox">
+        <summary>Course</summary>
+        <button class="FilterButton" onclick='filterRecipes("course", "snack", this)'>Snack</button>
+        <button class="FilterButton" onclick='filterRecipes("course", "sa", this)'>Savoury</button>
+        <button class="FilterButton" onclick='filterRecipes("course", "main", this)'>Main</button>
+        <button class="FilterButton" onclick='filterRecipes("course", "salad", this)'>Salad</button>
+        <button class="FilterButton" onclick='filterRecipes("course", "sweet", this)'>Sweet</button>
+        <button class="FilterButton" onclick='filterRecipes("course", "dess", this)'>Dessert</button>
+      </details>
     </div>
+
+    <!--these categories were selected because they represent the most common preferences for cooking information. Also, it's not too much to make the 
+      viewer be overwhelemd-->
 
     <hr /> 
 
@@ -46,6 +86,9 @@
     <div class="RecipeBox"
          data-author="HM"
          data-level="low"
+         data-taste="Italian"
+         data-diet="Vegetarian"
+         data-course="main"
     >
     <!-- 
       the above tag already has one custom data category called author - to get the filter to work with other catgories you'll need
@@ -55,9 +98,9 @@
 
       <!-- don't forget to change out <div>s for the most appropriate element -->
       <!-- i'll give you one for free - you should change the URL into an <a> tag, don't forget to add the appropriate attributes so it works as a link -->
-      <a class="RecipeLink">URL: https://www.abc.net.au/everyday/baked-puttanesca-risotto-with-tomato-olives-lemon-parsley-recipe/11270338</a>
+      
 
-      <div class="RecipeName">Recipe Name: Baked Puttanesca Risotto with Olives, Lemon and Parsley</div>
+      <div class="RecipeName">Recipe name: Baked Puttanesca Risotto with Olives, Lemon and Parsley</div>
 
       <div class="Author">Author: Hetty Mckinnon</div>
       
@@ -105,6 +148,9 @@
     <div class="RecipeBox"
          data-author="HM"
          data-level="low"
+         data-taste="Italian"
+         data-diet="Vegetarian"
+         data-course="salad"
     >
 
       <div class="RecipeLink">URL: https://www.abc.net.au/everyday/caprese-salad-slow-roasted-tomato-rocket-basil-gremolata-recipe/10776846</div>
@@ -156,6 +202,11 @@
     <div class="RecipeBox"
          data-author="KLA"
          data-level="medium"
+         data-taste="Fusion"
+         data-diet="Vegetarian"
+         data-course="snack"
+         data-course="sa"
+    
     >
 
       <div class="RecipeLink">URL: https://www.seriouseats.com/crispy-enoki-and-onion-fritter-with-thai-curry-mayo-recipe</div>
@@ -207,6 +258,10 @@
     <div class="RecipeBox"
          data-author="M"
          data-level="medium"
+         data-taste="Korean"
+         data-diet="Vegetarian"
+         data-course="snack"
+         data-course="sweet"
     >
 
       <div class="RecipeLink">URL: https://www.maangchi.com/recipe/jjinppang</div>
@@ -257,6 +312,10 @@
     <div class="RecipeBox"
          data-author="KLA"
          data-level="low"
+         data-taste="Western"
+         data-diet="Vegetarian"
+         data-course="snack"
+         data-course="sweet"
     >
 
       <div class="RecipeLink">URL: https://www.seriouseats.com/the-food-lab-best-chocolate-chip-cookie-recipe</div>
@@ -305,7 +364,11 @@
     <!-- Recipe 6 -->
     <div class="RecipeBox"
          data-author="KLA"
-         data-test="low"
+         data-level="low"
+         data-taste="Fusion"
+         data-diet="Vegetarian"
+         data-course="snack"
+         data-course="sa"
     >
 
       <div class="RecipeLink">URL: https://www.seriouseats.com/grilled-cheese-with-kimchi-recipe</div>
@@ -356,7 +419,10 @@
     <!-- Recipe 7 -->
     <div class="RecipeBox"
          data-author="CLM"
-         data-test="medium"
+         data-level="medium"
+         data-taste="Western"
+         data-diet="meat"
+         data-course="main"
     >
 
       <div class="RecipeLink">URL: https://www.patreon.com/posts/recipe-hands-off-60369279</div>
@@ -383,7 +449,7 @@
 
       <div class="Publisher">Publisher: Carla Lalli Music</div>
 
-      <div class="Cuisine">Cuisine: American</div>
+      <div class="Cuisine">Cuisine: Western</div>
 
       <div class="TimeToCook">Time to Cook: overnight preperation. 4 hours to cook</div>
 
@@ -406,7 +472,11 @@
     <!-- Recipe 8 -->
     <div class="RecipeBox"
          data-author="M"
-         data-test="low"
+         data-level="low"
+         data-taste="Korean"
+         data-diet="Vegetarian"
+         data-course="snack"
+         data-course="sa"
     >
 
       <div class="RecipeLink">URL: https://www.maangchi.com/recipe/kimchijeon</div>
@@ -455,7 +525,10 @@
     <!-- Recipe 9 -->
     <div class="RecipeBox"
          data-author="KLA"
-         data-test="medium"
+         data-level="medium"
+         data-taste="North"
+         data-diet="Vegetarian"
+         data-course="main"
     >
 
       <div class="RecipeLink">URL: https://www.seriouseats.com/shakshuka-north-african-shirred-eggs-tomato-pepper-recipe</div>
@@ -504,7 +577,10 @@
     <!-- Recipe 10 -->
     <div class="RecipeBox"
          data-author="CLM"
-         data-test="low"
+         data-level="low"
+         data-taste="Italian"
+         data-diet="pes"
+         data-course="main"
     >
 
       <div class="RecipeLink">URL: https://www.patreon.com/posts/pasta-with-sauce-45042575</div>
@@ -553,7 +629,11 @@
     <!-- Recipe 11 -->
     <div class="RecipeBox"
          data-author="M"
-         data-test="medium"
+         data-level="medium"
+         data-taste="Korean"
+         data-diet="meat"
+         data-course="main"
+         
     >
 
       <div class="RecipeLink">URL: https://www.maangchi.com/recipe/yangnyeom-tongdak</div>
@@ -604,7 +684,10 @@
     <!-- Recipe 12 -->
     <div class="RecipeBox"
          data-author="KLA"
-         data-test="medium"
+         data-level="medium"
+         data-taste="Russ"
+         data-diet="meat"
+         data-course="main"
     >
 
       <div class="RecipeLink">URL: https://www.seriouseats.com/ultimate-beef-stroganof-recipe</div>
@@ -655,7 +738,10 @@
     <!-- Recipe 13 -->
     <div class="RecipeBox"
          data-author="CLM"
-         data-test="medium"
+         data-level="medium"
+         data-taste="French"
+         data-diet="Vegetarian"
+         data-course="dess"
     >
 
       <div class="RecipeLink">URL: https://www.patreon.com/posts/recipe-vanilla-60100711</div>
@@ -706,7 +792,10 @@
     <!-- Recipe 14 -->
     <div class="RecipeBox"
          data-author="HM"
-         data-test="low"
+         data-level="low"
+         data-taste="Fusion"
+         data-diet="Vegetarian"
+         data-course="main"
     >
 
       <div class="RecipeLink">URL: https://www.abc.net.au/everyday/vegetarian-carbonara-with-mushrooms-and-miso/12426392</div>

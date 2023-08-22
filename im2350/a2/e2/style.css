@@ -3,27 +3,37 @@
 *{
   box-sizing: border-box;
   background-origin: border-box;
-  margin: 0;
+  margin: 13px;
+
 }
 
 /* Basis for colour palette comes from 1bit Monitor Glow Palette by Polyducks */
 /* https://lospec.com/palette-list/1bit-monitor-glow */
 /* you're welcome to change the colours if you want or any of the other general page style */
-:root{
+
+root{
   --col-01:#222323;
   --col-02:#f0f6f0;
   --col-03:#5252ff;
   --col-04:#b6e878;
-  --border: 1px solid var(--col-02);
+  --border: .1rem solid var(var(--col-03));
+  
 }
 
+
 body{
-  display: flex;
-  flex-direction: column;
-  background-color: var(--col-01);
-  color: var(--col-02);
-  padding: 2vw;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+display: block;
+padding: 25px 40px;
+text-align: center;
+min-width: 140px;
+font-size: 16px;
+line-height: 30px;
+color: var(--white-color);
+background: var(--accent-color);
+transition: 0.5s all ease-in-out;
 }
+
 
 /*
   i've set up a basic flexbox for each recipe container - you might want to change some of the 
@@ -40,7 +50,8 @@ body{
 }
 
 .FilterBox{
-
+  border-bottom: solid;
+  border-width: 1px;
 }
 
 .FilterButton{
@@ -51,70 +62,87 @@ body{
   any duplicate properties
 */
 .SelectedFilter{
+  border: outset;
   background-color: #5252ff;
 }
 
 .RecipeLink{
-
+  text-align: right;
+  padding: 20px;
 }
 
 .RecipeName{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+  font-size:25px;
+  padding: 20px;
 
 }
 
 .Author{
+  text-align: right;
+  padding: 20px;
 
 }
 
 .RecipeImageContainer{
-
+  text-align: left;
+  padding: 20px;
 }
 
 .RecipeImg{
-
+  max-width: 100%;
+  max-height:100%;
+  float: left;
+  padding: 20px;
 }
 
-.Attribution{
+/*why the float didn't work?*/
 
+.Attribution{
+  font-size: 12px;
+  text-align: left;
+  padding: 20px;
 }
 
 .Publisher{
-
+  text-align: right;
+  padding: 20px;
 }
 
 .Cuisine{
-
+  text-align: right;
+  padding: 20px;
 }
 
 .TimeToCook{
-
+  text-align: right;
+  padding: 20px;
 }
 
 .SkillLevel{
-
+  text-align: right;
+  padding: 20px;
 }
 
 .Course{
-
+  text-align: right;
+  padding: 20px;
 }
 
 .Servings{
-
+  text-align: right;
+  padding: 20px;
 }
 
 .Dietary{
-
+  text-align: right;
+  padding: 20px;
 }
 
-.DatePublished{
-
-}
-
-.DateUpdated{
-
-}
 
 .SpecialEquipment{
-
+  text-align: right;
+  padding: 20px;
 }
 
