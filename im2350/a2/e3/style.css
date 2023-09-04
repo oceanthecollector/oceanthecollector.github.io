@@ -1,0 +1,241 @@
+/*
+  This one CSS file is imported into both index.html AND hosono.html so you need to be careful that it 
+  works for both.
+*/
+
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+:root{
+  /* first two colours come from Kuroi's Manga Pallete Palette */
+  /* https://lospec.com/palette-list/manga-pallete */
+  --col-01:#171219;
+  --col-02:#f2fbeb;
+  --col-03:#5252ff;
+  --col-04:#b6e878;
+  font-size: 16px;
+
+  /* scroll behaviour makes the <a> links to ids scroll to position over time rather than immediately */
+  scroll-behavior: smooth;
+
+}
+
+body{
+  padding: 1rem;
+  background-color: var(--col-02);
+  color: var(--col-01);
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav li{
+  font-size: 1rem;
+}
+
+section{
+  margin-bottom: 2rem;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+p{
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+figcaption{
+  width: fit-content;
+}
+
+dl ul{
+  margin-bottom: 0;
+}
+
+li{
+  font-size: 4rem;
+}
+
+dd{
+  padding-left: 60px;
+}
+
+li ul{
+  padding-left: 40px;
+}
+
+.img-wrapper{
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.img-figure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-img{
+  width: 80%;
+}
+
+.res-columns{
+  column-width: 25rem;
+}
+
+#mode-button{
+  background-color: #b2b2b2;
+  width: 100px;
+  height: 50px;
+  border-radius: 18px;
+  float: right;
+  /* note the use of position: sticky to keep the button on the page even with scrolling */
+  position: sticky;
+  top: 2rem;
+
+}
+
+/* code for loading page */
+
+#load-body{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* changing button to look like a link */
+#load-link{
+  cursor: pointer;
+  line-height: 1rem;
+  border: 1px;
+}
+
+#load-link:hover{
+  background-color:#5252ff;
+  border: 1px;
+}
+
+#load-link:active{
+  color:aqua;
+}
+
+/* throbber while page is fake loading */
+#load-throbber{
+  /* the width, height and background-color give it a shape on the page without any content inside - 
+  these value are arbitrary, please change to create your own design  */
+  border: 8px solid #588189;
+  border-radius: 50%;
+  border-top: 8px solid #fd37f3;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: spin 2s linear infinite; 
+  animation: spin 2s linear infinite;
+  display: none;
+}
+
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  30% { transform: rotate(50deg);}
+  100% { transform: rotate(360deg); }
+}
+
+nav ol li a {
+  color: rgb(124, 34, 208);
+}
+
+/* Media Queries */
+
+/* medium devices 600 - 992 */
+@media only screen and (min-width: 600px) {
+  :root{
+    font-size: 20px;
+  }
+  
+  .img-wrapper{
+    width: 75%;
+    margin: 1.5rem auto;
+  }
+
+}
+
+/* medium devices 992 + */
+@media only screen and (min-width: 992px) {
+  :root{
+    font-size: 24px;
+  }
+
+  .img-wrapper{
+    max-width: fit-content;
+    float: right;
+    margin: 1.5rem;
+  }
+
+}
+
+/* for someone who don't want to see an animation */
+@media (prefers-reduced-motion) {
+  :root{
+    scroll-behavior: auto;
+  }
+}
+
+/* 
+1. <button> with the id of load-link on the loading page (index.html)
+- I try to make it a bit stand out by put it into a box, and when the cursor touch on the box, it's change into
+a pointer and the box turn into blue which help the viewer recognize the different
+- After clicking the "Click to load page" the sentence turn into aqua color to anounce the viewer 
+"hey you already click this don't worry"
+(or personally i just a bit obsessed with aqua)
+
+Additional thought / working process:
+- I still really confused when clicking it my web can't turn to the main page? I have stuck here for
+2 days so i just get through it (17:48)
+- (19:55) okay already fixed it's typing error again I use "loadder" instead of
+load-throbber
+
+2. <div> with the id of load-throbber on the loading page (index.html)
+- I choose round spin loadder which I learn from w3school
+- The load-throbber is somehow make people stay still with the hope that 
+it's not gonna take long
+- Also, this make viewer satisfied that their time are not wasting because something
+happen ( even when things moving infinited)
+- The color shouldn't be boring, but i realized that the still circle should have a darker color 
+than the moving object for better looking
+
+Additional thought / working process:
+- "display: none" yayyyyy this help me a lot when i wonder how i could make the throbber 
+appear after clicking the hover...
+
+
+3. <li>s inside the <ol> inside of the <nav> on the information page (hosono.html)
+- the <nav> is a big circle, and inside it we have <ol> which numbered in order the 
+navigation links: the smallest circle in here
+- This order help the user immidiatedly find the information they one, quickly and simple
+- Plus, the "moving" action between paragraphs create satisfied emotion better than "appeare" action
+
+4. <button> with the id of mode-button on the information page (hosono.html)
+- Eye catching when it's stick from the right
+- Convienced when ever people want to switch the mode
+- Make it look like a button even more convince the user to experience
+*/
+
+
+
+/*
+Reference:
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_loader
+
+*/
