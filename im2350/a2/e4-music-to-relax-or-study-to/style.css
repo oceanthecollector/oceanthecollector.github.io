@@ -142,3 +142,52 @@
     background-position: 50% 0%;
   }
 }
+
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 13px;
+
+}
+
+body{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: block;
+  padding: 25px 40px;
+  min-width: 140px;
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--white-color);
+  background: var(--accent-color);
+  transition: 0.5s all ease-in-out;
+  
+    background: rgb(183,148,227);
+    background: radial-gradient(circle, rgba(183,148,227,1) 0%, rgba(148,187,233,1) 100%);
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* My plan is to create an animated gradient with two colors; however, it doesn't seem to be working.I've chosen shades of blue and purple as 
+they not only make people feel comfortable but also add a modern touch. The song's melody has a distinct cyberpunk style, which convinced me 
+to make these two colors the main theme.
+
+I've kept the layout as simple as possible since it's meant for studying. 
+People tend to open it and leave it aside while they work. The layout and style draw inspiration from the exercises you provided previously, 
+with adjustments to suit the current content.
+
+As a result, I believe that looping is the most crucial feature for this platform. Users might leave a video playing for hours while they focus on complex tasks like studying or working. 
+Some may even use this sound for cooking or sleeping, which would make even more sense! Furthermore, 
+I want to incorporate additional features because, in reality, we don't always know how people will use the tools we create. 
+Providing some extra functionality is quite necessary
