@@ -1,0 +1,198 @@
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+/* Basis for colour palette comes from 1bit Monitor Glow Palette by Polyducks */
+/* https://lospec.com/palette-list/1bit-monitor-glow */
+/* you're welcome to change the colours if you want or any of the other general page style */
+:root{
+  --col-01:#222323;
+  --col-02:#f0f6f0;
+  --col-03:#5252ff;
+  --col-04:#b6e878;
+  --col-05:#bcbdbc;
+  --col-06:#6f6f6f;
+  --border: 1px solid var(--col-02);
+}
+
+.audio-player-wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* becuase I want to overlay the play icon on the audio they need to be in their own wrapper */
+.audio-element-wrapper{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+#audioElement{
+  width: 100%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+#heroImage{
+  width: 100%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+
+
+#audioPlayOverlay{
+  width: 8rem;
+  height: 8rem;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-self: center;
+  align-self: center;
+  opacity: 0.6;
+  pointer-events: none;
+  display: none;
+}
+
+.audio-controls-wrapper{
+  display: flex;
+  justify-content: center;
+}
+/* this overwrites the above display:flex - something which is then undone when the JS loads */
+#controlsWrapper{
+  display: none;
+}
+
+.audio-control-button{
+  width: 2rem;
+  height: 2rem;
+  padding: .1rem;
+  border: none;
+  cursor: pointer;
+}
+.audio-control-button:hover{
+  background-color: var(--col-05);
+}
+.audio-control-button:active{
+  background-color: var(--col-06);
+}
+.button-icon{
+  pointer-events: none;
+}
+
+#playButton{
+  background-image: url('./icons/play.svg');
+}
+
+#rewindButton{
+  background-image: url('./icons/rewind.svg');
+}
+
+#fastForwardButton{
+  background-image: url('./icons/fastForward.svg');
+}
+
+#muteButton{
+  background-image: url('./icons/mute.svg');
+}
+
+#loopButton{
+  background-image: url('./icons/loop.svg');
+}
+
+#fullScreenButton{
+  background-image: url('./icons/fullScreen.svg');
+}
+
+.audio-progress-bar{
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  height: 2rem;
+  flex-grow: 1;
+  cursor: pointer;
+  background-color: var(--col-01);
+  box-shadow: 0 1px 2px var(--col-02) inset;
+}
+::-moz-progress-bar {
+  background-color: var(--col-02);
+}
+
+::-webkit-progress-bar {
+  background-color: var(--col-01);
+  box-shadow: 0 1px 2px var(--col-02) inset;
+}
+::-webkit-progress-value {
+  background-color: var(--col-02);
+}
+
+.timeline-loading{
+  background-image: -moz-repeating-linear-gradient(45deg, var(--col-03) 0% 2%, transparent 2% 4%, red 4%);
+  background-size: 200% 100%;
+  animation: loadingAnimation 4s linear infinite;
+}
+
+@keyframes loadingAnimation {
+  100%{
+    background-position: 50% 0%;
+  }
+}
+
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 13px;
+
+}
+
+body{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: block;
+  padding: 25px 40px;
+  min-width: 140px;
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--white-color);
+  background: var(--accent-color);
+  transition: 0.5s all ease-in-out;
+  
+    background: rgb(183,148,227);
+    background: radial-gradient(circle, rgba(183,148,227,1) 0%, rgba(148,187,233,1) 100%);
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* My plan is to create an animated gradient with two colors; however, it doesn't seem to be working.I've chosen shades of blue and purple as 
+they not only make people feel comfortable but also add a modern touch. The song's melody has a distinct cyberpunk style, which convinced me 
+to make these two colors the main theme.
+
+I've kept the layout as simple as possible since it's meant for studying. 
+People tend to open it and leave it aside while they work. The layout and style draw inspiration from the exercises you provided previously, 
+with adjustments to suit the current content. The reason while i leave the box layout is i find it really organized in order that doesn't confused the 
+user to choose / understand / interact with the interface. From the first glance, the user will have a comfortable vibe by the background. the line 
+"Hover to read more" will suggest viewer to interact and see the contribution.
+
+As a result, I believe that looping is the most crucial feature for this platform. Users might leave a video playing for hours while they focus on complex tasks like studying or working. 
+Some may even use this sound for cooking or sleeping, which would make even more sense! Furthermore, 
+I want to incorporate additional features because, in reality, we don't always know how people will use the tools we create. 
+Providing some extra functionality is quite necessary.
+
+However based on the enquirement, i'll still follow by only choose the looping one. I still keep the code as my personal research and experience
+to find out which one is a suitable element.
