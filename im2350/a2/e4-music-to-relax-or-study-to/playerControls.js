@@ -6,15 +6,15 @@ let audioElement = document.getElementById("audioElement");
 // the buttons for the controls
 let playButton = document.getElementById("playButton");
 
-let rewindButton = document.getElementById("rewindButton");
+//let rewindButton = document.getElementById("rewindButton");
 
-let fastFowardButton = document.getElementById("fastFowardButton");
+//let fastFowardButton = document.getElementById("fastFowardButton");
 
 let muteButton = document.getElementById("muteButton")
 
 let loopButton = document.getElementById("loopButton")
 
-let fullScreenButton = document.getElementById("fullScreenButton")
+//let fullScreenButton = document.getElementById("fullScreenButton")
 
 let stopButton = document.getElementById("stopButton");
 // the progress element
@@ -192,11 +192,11 @@ Feedback - the audio turn back from the starting point
 /* I realize we don;t need to call "let" again since we already do that on the top. 
 Right now we just work with the function*/ 
 
-function audioRewind(){
-  audioElement.currentTime= 0;
-}
+//function audioRewind(){
+//  audioElement.currentTime= 0;
+//}
 /* set the time to 0, time unit here is second*/ 
-rewindButton.addEventListener('click', audioRewind);
+//rewindButton.addEventListener('click', audioRewind);
  
 
 /* fastFoward */
@@ -206,13 +206,13 @@ Signifier - I want to press a button (double triangle points to the right)
 Feedback - the audio forward to the end
  */
 
-function audioFastFoward(){
-  audioElement.currentTime= 270;
-}
+//function audioFastFoward(){
+  //audioElement.currentTime= 270;
+//}
 /* set the time to 0, time unit here is second*/ 
 /* I haven't find way to have the exact ending second for the the current time, so i experience many time
 and see that 270 is nearly reach the ending point */
-fastForwardButton.addEventListener('click', audioFastFoward);
+//fastForwardButton.addEventListener('click', audioFastFoward);
 
 
 /* loop (n, v): it runs continuously, so that the same things are repeated again and again; and after
@@ -256,23 +256,23 @@ Feedback - the hero image is expanding
  */
 
 
-function fullScreen() {
+//function fullScreen() {
   
-  if (heroImage.requestFullscreen) {
-    heroImage.requestFullscreen();
+  //if (heroImage.requestFullscreen) {
+    //heroImage.requestFullscreen();
 
     //the element i want to make fullscreen is the hero image, so with the first command
     //i request it to fill the whole screen
 
-  } else if (document.exitFullscreen) {
-    document.exitFullscreen();
-  }
+  //} else if (document.exitFullscreen) {
+    //document.exitFullscreen();
+  //}
 //after the full screen mode have activate, we use document ( object represents the entire web page, including its structure)
 //object to exit the mode
   
-}
+//}
 
-fullScreenButton.addEventListener('click', fullScreen)
+//fullScreenButton.addEventListener('click', fullScreen)
 
 //https://www.w3schools.com/howto/howto_js_fullscreen.asp
 //https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API
