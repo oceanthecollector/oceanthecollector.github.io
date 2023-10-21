@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOMO2SENSE</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="column">
+            <div class="moon-lover">
+                <h2>. &deg; &#9792; &middot; &#9790; Moon lover &#9789; &#9900; &middot; &deg; . </h2>
+            </div>
+            <div class="moon-hide" id="moonid">
+                <p>I hope to be your only Moon one day </p>
+                <p>no more waiting for a star that has long been far away for thousands of miles.</p>
+            </div>
+        </div>
+
+        <div class="column" >
+            <div class="sunshine-love">
+                <h2>&#9900; &middot; &deg; &#9788; Sunshine love &#9788; &deg; &#9794; &middot; </h2>
+            </div> 
+            <div class="sun-hide" id="sunid">
+                <p>I want a lover as a sunshine</p>
+                <p>Cover in your arm, i'm shine bright.</p>
+            </div>
+        </div>
+
+        <div class="video">
+            <video autoplay loop muted>
+                <source src="IMG_0921.mp4" type="video/mp4">
+              </video>
+
+        </div>
+    </div>
+</body>
+</html>
+
+<!--
+  At first i want to add Video In Text Background Using HTML and CSS to create a motion and make the text
+  seem to be more intersting. however i find it could be really messy, and it's hard to control an animation with textbox
+  so i try to be more basic. I think would leave the video, using basic background to make people focus on my word more
+-->
+
+<!-- 
+  I put div class sunshine love, mother, my little cat, ocean inside a big class and name it "text box", however
+  the animation it's not work for each of smaller class that i've devided. So i try to delete the big class, and in
+  style css, i added the command for each of smaller class. 
+-->
+
+<!--
+ I want to see a black screen, that have a moving words vertically
+ I want when hover the words, there's a circle that appear, which i could see some scene moving 
+ under it, and the yellow words appear  
+
+-->
+
+<!-- 
+  18.10.23
+  1. How to make a 4 equal rows on screen?
+
+-->
+
+<!--
+
+  I decide to focus on 2 short stories than 5 after it's would be a problem for my layout
+  if there are too much movement
+    <div class="hide-mother">
+      <a>I'm your little crescent moon that lulls you to sleep.</a>
+      <a>You're the sunshine in my blooming flower season.</a>
+    </div>
+
+
+    <div class="hide-ocean">
+      <a>My dear, does calling out loud bring us even closer?       </a>
+      <a>Calling you so earnestly, could one day make the sea sleep peacefully in my arms?</a>
+    </div>
+
+    <div class="hide-cat">
+      <a>A golden cat; a sensitive girl</a>
+      <a>we embark on a journey with no destination.</a>
+    </div>
+-->
+
+<!-- using symbol 
+https://www.toptal.com/designers/htmlarrows/symbols/
+-->
+
+<!-- I just realized that the order it's importtant. So what i'm trying to do it's make video behind the text. However there's no way 
+for me to figured out. After a while, i tried to change the order, put the div video in front of the 
+the text. It's turn to better since now i could see the hidden text 
+"
+I hope to be your only Moon one day
+no more waiting for a star that has long been far away for thousands of miles.
+". At least it's not being covered anymore
+-->
+
+<!-- why the hell my hover doesn't work ????????????-->
+<!-- i think i have a "coding art block" right now since my webpage get stuck at everything
+1. The layout was moving a round (still in 4 rows but changing whenever I
+drag an inspect)
+2. Can't put the video in to the row that i want, in the columnhide row div
+3. (the biggest problem) Hover don't work: i can make the words stop when hover on div, but the other 
+2 sentences didn't appear since i use css why why why why, thinking about using js instead 
+but that would be more complicated
+4. There are 3 more things i want to do with my work: adding pen cursor; typing effect on
+2 sentences, synthwave music   
+1 DAY LEFT! What should i do???????
+-->
+
+<!-- It's start working since i put div class moon lover and moon hide into 1
+big class (class column)-->
+
+<!-- Action: hover over the "moon lover," the animation will pause, and the "moon hide" content will be 
+  displayed. When you hover off the "moon lover," 
+  the animation will resume, and the "moon hide" content will be hidden.-->
+
+<!-- dang so it's all about the order in css and after i devide my code into 2 diffenrent paragraphs
+.moon-hide {
+    display: none;
+    color: gold;
+    animation-play-state: running;
+}
+
+.moon-lover:hover {
+    animation-play-state: paused;
+}
+
+.moon-lover:hover + .moon-hide {
+    display: block;
+}-->
+
+<!-- the video need to be muted to worked-->
+

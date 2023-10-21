@@ -1,0 +1,155 @@
+
+
+.row {
+    width: 100%;
+    padding: 0px;
+    height: 100%;
+}
+
+.column {
+   height: 40%;
+}
+
+
+body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+    background-color: black;
+}
+
+
+video {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; 
+}
+
+
+/*
+.container{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+    /* z-index: 1; */
+  
+  
+/*
+.video{
+   
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    /* z-index: 2; */
+
+
+/* my first code format
+.text-box{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    color: #fff;
+    display: block;
+    align-items: center;
+    font-family:fantasy;
+    font-size: 45px;
+    font-weight: 300;
+} 
+*/
+
+.moon-lover{
+    position: relative;
+    color: #fff;
+    align-items: center;
+    font-family: monospace;
+    font-size: 50px;
+    animation-name: moon;
+    font-weight: 300;
+    animation-duration: 15s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;  
+}
+
+
+@keyframes moon {
+    0%   { left:-500px; top:60px;}
+    100%  { left:1900px; top:60px;}
+}
+
+
+
+
+.moon-hide {
+    font-size: 18px;
+    padding: 5em;
+    display: none;
+    color: gold;
+    animation-play-state: running;
+}
+
+.moon-lover:hover {
+    animation-play-state: paused;
+}
+
+.moon-lover:hover + .moon-hide {
+    display: block;
+}
+
+
+.sunshine-love{
+    position: relative;
+    color: #fff;
+    align-items: center;
+    font-family: monospace;
+    font-size: 50px;
+    font-weight: 300;
+    animation-name: sun;
+    animation-duration: 15s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes sun {
+    0%   { left:-1000px; top:60px;}
+    100%  { left:1900px; top:60px;}
+}
+
+.sun-hide {
+    font-size: 18px;
+    padding: 5em;
+    display: none;
+    color: gold;
+    animation-play-state: running;
+}
+
+.sunshine-love:hover {
+    animation-play-state: paused;
+}
+
+.sunshine-love:hover + .sun-hide {
+    display: block;
+}
+
+
+
+
+
+
+
+
